@@ -1,0 +1,210 @@
+.category-bar {
+  height: 65px;
+
+  .category-bar-wrap {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 1px solid $gray-15;
+    background: $gray-17;
+
+    &.is-sticky {
+      position: fixed;
+      width: calc(100% - 340px);
+      top: 0;
+      left: 0;
+      z-index: 9;
+
+      @include max-m {
+        width: 100%;
+      }
+    }
+  }
+
+  .wrapper {
+    height: 65px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-box {
+    width: 0;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    z-index: 20;
+
+    &.open {
+      width: 100%;
+
+      .search-form {
+        box-shadow: 0 0 0 1px $gray-15;
+      }
+
+      .close-search-icon {
+        display: flex;
+      }
+    }
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      background: $white;
+      width: 100%;
+      height: 100%;
+      border-radius: 2px;
+
+      &:focus-within {
+        box-shadow: 0 0 0 2px $blue-4;
+
+        .close-search-icon {
+          border-color: $blue-4;
+        }
+      }
+    }
+
+    .search-form-field {
+      background: transparent;
+      border: none;
+      width: 100%;
+      padding: 0 20px;
+      margin: 0;
+
+      &::placeholder {
+        opacity: 0.3;
+      }
+    }
+
+    .icon-search {
+      font-size: 28px;
+      color: $dark;
+      margin: 10px;
+      cursor: pointer;
+
+      @include max-m {
+        font-size: 26px;
+      }
+      @include max-s {
+        font-size: 24px;
+      }
+    }
+
+    .close-search-icon {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+      height: 100%;
+      width: 54px;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid $gray-15;
+    }
+  }
+
+  .category-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 85px;
+    color: $dark;
+
+    @include max-l {
+      padding-left: 70px;
+    }
+
+    .swiper-container {
+      margin: 0 30px;
+
+      @include max-l {
+        margin: 0 20px;
+      }
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      position: relative;
+    }
+
+    .swiper-slide {
+      width: auto;
+      text-align: center;
+      // transition: all 0.3s;
+      font-size: 17px;
+
+      @include max-m {
+        font-size: 16px;
+      }
+
+      &.selected {
+        color: $white;
+        background: $red-7;
+        border-radius: 999px;
+
+        span {
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      span {
+        display: block;
+        padding: 2px 20px;
+        height: 100%;
+        cursor: pointer;
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            color: $red-7;
+          }
+        }
+      }
+    }
+
+    .slider-nav {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      justify-content: flex-start;
+    }
+
+    .swiper-button-next {
+      right: 0;
+      justify-content: flex-end;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background: $gray-17;
+      color: $dark;
+
+      &:after {
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+
+        @include max-m {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .swiper-button-disabled {
+      display: none;
+    }
+  }
+}

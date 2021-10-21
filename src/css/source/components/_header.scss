@@ -1,0 +1,189 @@
+header {
+  color: $dark;
+  // height: 160px;
+
+  .header-wrapper {
+    width: calc(100% - 340px);
+    padding: 20px 0;
+
+    @include max-m {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .site-logo {
+    cursor: pointer;
+    img {
+      max-height: 120px;
+
+      @include max-l {
+        max-height: 100px;
+      }
+      @include max-m {
+        max-height: 90px;
+      }
+      @include max-s {
+        max-height: 80px;
+      }
+    }
+  }
+
+  .header-infor-wrap {
+    margin-top: 25px;
+
+    @include max-l {
+      margin-top: 40px;
+    }
+    @include max-s {
+      margin-top: 30px;
+    }
+  }
+
+  .header-infor {
+    @include max-s {
+      font-size: 13px;
+    }
+
+    .infor-col {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        margin-bottom: 15px;
+
+        @include max-m {
+          margin-bottom: 10px;
+        }
+      }
+
+      .infor-icon {
+        margin-right: 5px;
+      }
+
+      .email {
+        line-height: 1;
+      }
+
+      .call-us {
+        line-height: 1;
+      }
+    }
+  }
+
+  .language-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .lang-box-wrap {
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      height: 40px;
+      font-size: 15px;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s $cubic4;
+
+      @include max-sm {
+        height: 30px;
+      }
+
+      &.open {
+        box-shadow: -1px 1px 10px -3px rgba(0, 0, 0, 0.3);
+        z-index: 30;
+        background: white;
+      }
+    }
+
+    .lang-opt {
+      cursor: pointer;
+      font-weight: 700;
+      display: flex;
+      padding-left: 10px;
+      min-height: 40px;
+      width: 85px;
+      order: 2;
+      align-items: center;
+      transition: color 0.3s $cubic4;
+      position: relative;
+
+      @include max-sm {
+        min-height: 30px;
+        width: 75px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: $red-7;
+        }
+      }
+
+      &.active {
+        border-top: none;
+        order: 1;
+
+        &:after {
+          position: absolute;
+          right: 10px;
+          content: "\e914";
+          font-family: "icon" !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          // color: $dark;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+
+          @include max-s {
+            right: 5px;
+          }
+        }
+      }
+
+      .lang-flag {
+        width: 25px;
+        height: 15px;
+        @include background-image;
+
+        @include max-sm {
+          width: 20px;
+          height: 12px;
+        }
+
+        &.de-flag {
+          background-image: url(#{$urlImg}/flag-ger.jpg);
+        }
+
+        &.vi-flag {
+          background-image: url(#{$urlImg}/flag-vi.jpg);
+        }
+
+        &.en-flag {
+          background-image: url(#{$urlImg}/gb.svg);
+        }
+      }
+
+      span {
+        margin: 0 2px 0 5px;
+        line-height: 1;
+
+        @include max-sm {
+          margin: 0 2px 0 5px;
+        }
+      }
+    }
+  }
+}

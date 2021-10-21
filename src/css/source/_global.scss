@@ -1,0 +1,204 @@
+* {
+  outline: none !important;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+  font-weight: $font-weight-default;
+  font-family: $font-primary;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $color-default;
+
+  @include max-m {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: $font-weight-regular;
+  font-size: 35px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0 0 15px;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+
+  //remove blank space under image
+  vertical-align: middle;
+
+  // check image dont have alt
+  &:not([alt]),
+  &[alt=""] {
+    border: 5px solid red;
+  }
+}
+
+p {
+  margin: 0 0 25px 0;
+  font-weight: $font-weight-regular;
+  margin: 0;
+}
+
+a {
+  // @extend %link-hover;
+  cursor: pointer;
+  // text-decoration: none;
+  color: $gray-16;
+}
+
+input {
+  width: 100%;
+  border: 1px solid $gray;
+  padding: 8px 13px;
+  display: flex;
+  align-items: center;
+  background: white;
+  position: relative;
+  border-radius: 0;
+  font-family: $font-primary;
+  font-size: $font-size-default;
+}
+
+input:disabled {
+  background: $gray-9;
+}
+
+::-webkit-input-placeholder {
+  color: $gray;
+  opacity: 0.7;
+}
+
+::-moz-placeholder {
+  color: $gray;
+  opacity: 0.7;
+}
+
+:-ms-input-placeholder {
+  color: $gray;
+  opacity: 0.7;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $gray;
+}
+
+html,
+.body-wrapper {
+  &.disable-scroll {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.overlay-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $dark-5;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.active-quick-view {
+    opacity: 0.95;
+    visibility: visible;
+  }
+
+  &.active-info-popup,
+  &.active-delivery-popup,
+  &.active-payment-popup {
+    opacity: 0.7;
+    visibility: visible;
+  }
+}
+
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.is-off {
+  display: none !important;
+}
+
+.overlay-btn {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+main {
+  width: calc(100% - 340px);
+
+  @include max-m {
+    width: 100%;
+  }
+}
+.main-order {
+  margin: 35px 0;
+
+  @include max-s {
+    margin: 15px 0;
+  }
+}

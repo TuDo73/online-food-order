@@ -1,0 +1,463 @@
+.main-checkout {
+  margin: 20px 0;
+
+  .shipping-info-form {
+    background: $gray-17;
+    padding: 25px;
+    border: 1px solid $gray-15;
+    border-radius: 3px;
+
+    @include max-s {
+      padding: 15px;
+    }
+  }
+
+  .delivery-address {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray-22;
+  }
+
+  h4,
+  h5,
+  .checkout-heading {
+    font-weight: $font-weight-bold;
+    color: $dark;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    position: relative;
+    margin-bottom: 30px;
+
+    @include max-m {
+      margin-bottom: 20px;
+    }
+  }
+
+  .checkout-heading {
+    display: block;
+    text-align: center;
+    font-size: 34px;
+
+    @include max-m {
+      font-size: 30px;
+    }
+
+    @include max-s {
+      font-size: 28px;
+    }
+  }
+
+  .back {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s $cubic4;
+      padding: 10px;
+      background: $blue-4;
+      color: $white;
+      padding: 5px 12px 5px 5px;
+      border-radius: 3px;
+      font-size: 20px;
+
+      @include max-m {
+        font-size: 18px;
+      }
+
+      .back-icon {
+        transition: all 0.3s $cubic4;
+      }
+
+      &:hover {
+        .back-icon {
+          transform: translateX(-5px);
+        }
+      }
+    }
+  }
+
+  .form-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    @include max-sm {
+      margin: 0;
+    }
+  }
+
+  .form-item {
+    width: calc((100% / 2) - 40px);
+    margin: 0 15px 20px 15px;
+
+    @include max-sm {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    .form-heading {
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      box-shadow: 0 0 0 1px $gray-22;
+      padding: 15px;
+      color: $dark-5;
+      border: none;
+      transition: box-shadow 0.2s;
+      -webkit-appearance: none; // fix iphone form
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          box-shadow: 0 0 0 1px $dark;
+        }
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px $blue-4;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+        color: $gray;
+      }
+    }
+  }
+
+  .shipping-methods {
+    margin-bottom: 20px;
+  }
+
+  .shipping-select {
+    cursor: pointer;
+    background-color: $blue-4;
+    border-radius: 3px;
+    border: none;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    width: 200px;
+    color: $white;
+    font-weight: bold;
+    font-size: 16px !important; //fix auto zoom in input device
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: linear-gradient(45deg, transparent 50%, white 50%),
+      linear-gradient(135deg, white 50%, transparent 50%),
+      linear-gradient(to right, white, white);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+
+    &:focus {
+      font-size: 16px !important; //fix auto zoom in input device
+    }
+  }
+
+  .checkout-row {
+    box-shadow: 0 0 0 1px $gray-15;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 20px 0;
+    transition: all 0.3s $cubic4;
+
+    &.pay-with {
+      margin-bottom: 40px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        box-shadow: 0 0 0 1px $blue-4;
+      }
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .row-content {
+      display: flex;
+      position: relative;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .col-icon {
+      color: $dark;
+      // font-size: 20px;
+    }
+
+    .col-content {
+      margin-left: 20px;
+
+      h5 {
+        margin-bottom: 3px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .row-icon {
+      position: absolute;
+      right: 20px;
+    }
+
+    .row-icon-wrap {
+      background: $blue-5;
+      border-radius: 50%;
+      color: $white;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .order-rule {
+    font-size: 12px;
+    text-align: center;
+  }
+  .order-btn {
+    margin: 0 auto;
+    padding: 20px;
+    background: $red-9;
+    cursor: pointer;
+    color: $white;
+    text-align: center;
+    width: 600px;
+    font-weight: $font-weight-bold;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: all 0.3s $cubic4;
+    margin-top: 10px;
+
+    @include max-sm {
+      width: 100%;
+    }
+
+    &:hover {
+      background: $red-8;
+    }
+  }
+}
+
+.checkout-popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s $cubic4;
+  background: $white;
+  width: 550px;
+  // height: 350px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+
+  @include max-sm {
+    top: 50%;
+  }
+
+  @include max-s {
+    width: 80%;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup-content {
+    height: 100%;
+  }
+
+  .popup-content-wrap {
+    height: 100%;
+    background: $gray-17;
+    padding: 25px;
+
+    @include max-s {
+      padding: 20px;
+    }
+  }
+
+  .popup-heading {
+    font-weight: $font-weight-bold;
+    font-size: 25px;
+    color: $dark;
+    padding: 25px;
+    border-bottom: 1px solid $gray-15;
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-s {
+      padding: 20px;
+    }
+  }
+
+  .close-popup {
+    cursor: pointer;
+
+    span {
+      font-size: 16px;
+
+      @include max-sm {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .popup-btn {
+    width: 100%;
+    background: $red-9;
+    transition: all 0.3s $cubic4;
+    color: $white;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: $font-weight-bold;
+    border-radius: 3px;
+    font-size: 18px;
+    margin-top: 60px;
+
+    @include max-s {
+      margin-top: 40px;
+    }
+
+    &:hover {
+      background: $red-8;
+    }
+  }
+
+  .select-wrap {
+    position: relative;
+
+    span {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+    }
+  }
+
+  .delivery-time-select {
+    cursor: pointer;
+    background-color: $white;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 0 1px $gray-22;
+    display: inline-block;
+    padding: 12px 40px 12px 12px;
+    width: 100%;
+    transition: box-shadow 0.3s $cubic4;
+    font-size: 16px !important; //fix auto zoom in input device
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover {
+      font-size: 16px !important; //fix auto zoom in input device
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $blue-4;
+    }
+  }
+
+  .payment-methods-box {
+    display: flex;
+
+    @include max-s {
+      flex-direction: column;
+    }
+
+    .method-opt {
+      box-shadow: 0 0 0 1px $gray-22;
+      cursor: pointer;
+      border-radius: 2px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 20px;
+      transition: all 0.3s $cubic4;
+
+      @include max-s {
+        padding: 15px;
+      }
+
+      &:first-child {
+        margin-right: 20px;
+
+        @include max-s {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 1px $blue-4;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      p {
+        margin-left: 20px;
+        font-weight: $font-weight-bold;
+      }
+
+      span {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $red-9;
+
+        @include max-s {
+          right: 15px;
+        }
+      }
+    }
+  }
+}

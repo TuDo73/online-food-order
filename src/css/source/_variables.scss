@@ -1,0 +1,184 @@
+/* Path source
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$urlImg: "assets/images";
+$urlFont: "assets/fonts";
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// $color-primary: #262626;
+$color-primary: #0a3847;
+$white: white;
+$black: black;
+$dark: $color-primary;
+$dark-2: #393551;
+$dark-3: #626a87;
+$dark-4: #47639c;
+$dark-5: #262626;
+$purple: #b690f3;
+$purple-2: #5e43d5;
+$purple-3: #a500ad;
+$red: #d11338;
+$red-2: #f88889;
+$red-3: #ef7679;
+$red-4: #ee4040;
+$red-5: #f37272;
+$red-6: #750000;
+$red-7: #fc4c4b;
+$red-8: #93051c;
+$red-9: #c00a27;
+$blue: #0064ff;
+$blue-2: #20a8ff;
+$blue-3: #56b3da;
+$blue-4: #167f92;
+$blue-5: #1574f5;
+$gray: #4d4d4d;
+$gray-2: rgba(181, 181, 181, 0.42);
+$gray-3: #3e3951;
+$gray-4: #8d8d8d;
+$gray-5: rgb(155, 164, 184);
+$gray-6: #f6f6f6;
+$gray-7: #e8eaee;
+$gray-8: #bdc4d2;
+$gray-9: #e2e2e2;
+$gray-10: #f1f3f4;
+$gray-11: #f1f1f1;
+$gray-12: #eaf3f3;
+$gray-13: #d9e4e6;
+$gray-14: #676767;
+$gray-15: #e4e4e4;
+$gray-16: #686464;
+$gray-17: #f3f3f3;
+$gray-18: #3a3a3a;
+$gray-19: #f9f9f9;
+$gray-20: #e7e7e7;
+$gray-21: #f8f5f2;
+$gray-22: #cfcac4;
+$green: #0b9486;
+$green-2: #18d2ba;
+$green-3: #4dbfad;
+$green-4: #55e27d;
+$green-5: #4ab54a;
+$green-6: #80f780;
+$yellow: #f1c433;
+$yellow-2: #ffd966;
+$yellow-3: #ffb303;
+$yellow-4: #ffc800;
+$pink: #e05dc1;
+$orange: #ce7500;
+$color-default: $gray-16;
+
+/* Gradient
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$gradient-1: linear-gradient(
+  to bottom,
+  rgba(120, 149, 254, 1) 0%,
+  rgba(176, 191, 254, 1) 100%
+);
+$gradient-2: linear-gradient(
+  to bottom,
+  rgba(103, 150, 237, 1) 0%,
+  rgba(72, 116, 227, 1) 100%
+);
+$gradient-3: linear-gradient(
+  135deg,
+  rgba(106, 222, 203, 1) 0%,
+  rgba(77, 191, 174, 1) 100%
+);
+$gradient-4: linear-gradient(
+  to bottom,
+  rgba(211, 144, 245, 1) 0%,
+  rgba(211, 144, 245, 1) 11%,
+  rgba(191, 113, 230, 1) 100%
+);
+$gradient-5: linear-gradient(
+  45deg,
+  rgba(105, 110, 121, 1) 0%,
+  rgba(43, 48, 59, 1) 100%
+);
+$gradient-6: linear-gradient(
+  to right,
+  rgba(76, 76, 76, 1) 0%,
+  rgba(102, 102, 102, 1) 100%
+);
+$gradient-7: linear-gradient(
+  to right,
+  rgba(241, 231, 103, 1) 0%,
+  rgba(254, 182, 69, 1) 100%
+);
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-roboto: "Roboto", sans-serif;
+$font-fira-sans: "Fira Sans", sans-serif;
+$font-primary: $font-fira-sans;
+$font-title: $font-fira-sans;
+$font-icon: "icon";
+
+/* Width page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// $width-page: 1420px;
+$width-page: 1200px;
+$width-page-m: 940px;
+$width-page-l: 1168px;
+$width-page-sm: 720px;
+
+/* Breakpoint
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$break-xl: 1600px;
+// $break-xl: 1280px;
+$break-l: 1200px;
+// $break-l: 1168px;
+$break-m: 992px; // device
+$break-sm: 768px; // mobile
+$break-s: 640px;
+$break-x: 480px;
+$break-xs: 375px;
+
+/* Font-weight
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 700;
+$font-weight-default: $font-weight-regular;
+
+/* Font-size
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-size-default: 16px;
+$font-size-heading-1: 36px;
+$font-size-heading-2: 26px;
+
+/* Gutter
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$gutter: 20px;
+$gutter-mobile: 10px;
+$space: 25px;
+
+/* Transition
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$cubic1: cubic-bezier(0.19, 1, 0.22, 1);
+$cubic2: cubic-bezier(0.48, 0.48, 0.57, 0.57);
+$cubic3: cubic-bezier(0.215, 0.61, 0.355, 1);
+$cubic4: cubic-bezier(0.4, 0, 0.2, 1);
+
+$transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+$transition-secondary: all 0.3s ease;
+
+// Border-radius
+$border-radius-primary: 5px;
+
+// Border
+$line-primary: 1px solid $gray;
+
+// Height
+$height-form-element: 36px;
+$height-button: 41px;
+$height-button-2: 31px;
+
+// Box-shadow
+$box-shadow-primary: 2px 2px 2px #b0b0b0;
+$box-shadow-secondary: 2px 2px 4px #b9b9b9;
+
+/* Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$button-height: 46px;

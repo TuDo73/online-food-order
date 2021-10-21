@@ -1,0 +1,141 @@
+footer {
+  position: relative;
+  overflow: hidden;
+  z-index: 30;
+  color: $white;
+  background-image: url(#{$urlImg}/footer.jpg);
+  @include background-image;
+
+  @include max-m {
+    margin-bottom: 72px;
+  }
+
+  .footer-top {
+    display: flex;
+    padding: 60px 0;
+
+    @include max-m {
+      padding: 30px 0;
+    }
+
+    @include max-sm {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+  }
+
+  .footer-col {
+    flex: 1;
+
+    @include max-sm {
+      width: calc((100% / 2) - 20px);
+      flex: none;
+
+      &:last-child {
+        margin: 30px 10px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include max-sm {
+        margin: 30px 10px;
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-bottom: 25px;
+
+      @include max-m {
+        font-size: 20px;
+      }
+    }
+
+    ul > li {
+      padding: 0 0 8px 0;
+      display: flex;
+
+      a {
+        display: inline-block;
+        color: $white;
+        transition: all 0.3s $cubic4;
+
+        &:hover {
+          color: $yellow-4;
+        }
+      }
+
+      .footer-icon {
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+    }
+
+    .social-list {
+      display: flex;
+
+      .social-item {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    background: $dark-5;
+    color: $white;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .scroll-top-btn {
+    position: fixed;
+    z-index: 1000;
+    bottom: -10px;
+    left: 30px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $red-9;
+    cursor: pointer;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0.4;
+    transition: all 0.3s;
+
+    &:hover {
+      background: $red-8;
+      opacity: 1;
+    }
+
+    @include max-m {
+      right: 10px;
+    }
+
+    @include min-m {
+    }
+
+    &.show {
+      visibility: visible;
+      bottom: 60px;
+
+      @include max-m {
+        bottom: 65px;
+      }
+    }
+
+    span {
+      color: $white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include max-s {
+        font-size: 14px;
+      }
+    }
+  }
+}

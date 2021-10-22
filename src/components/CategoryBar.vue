@@ -48,7 +48,6 @@
 <script>
 import eventBus from "@/eventBus/eventBus.js";
 import { mapState } from "vuex";
-import categoryService from "@/services/categoryService";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 
 export default {
@@ -72,7 +71,6 @@ export default {
         },
         allowTouchMove: false,
         slidesPerView: "auto",
-        // slideToClickedSlide: true,
         preventClicksPropagation: false,
         freeMode: true,
       },
@@ -113,7 +111,7 @@ export default {
   },
 
   created() {
-    eventBus.$on("handleCategorySlider", ($event) => {
+    eventBus.$on("handleCategorySlider", () => {
       console.log("Emit Slider");
       this.handleCategorySlider();
     });

@@ -81,17 +81,16 @@ export default {
             let cats = categories.data;
             let prods = products.data;
 
-            for (let i = 0; i < prods.length; i++) {
-              for (let j = 0; j < cats.length; j++) {
-                if (!cats[j].products) {
-                  cats[j].products = [];
-                }
+            cats.map((category) => {
+              const product = prods.filter(
+                (product) => product.category_code === category.code
+              );
 
-                if (prods[i].category_code === cats[j].code) {
-                  cats[j].products.push(prods[i]);
-                }
+              if (product) {
+                category.products = product;
               }
-            }
+              return category;
+            });
 
             this.$store.commit("category/setCategories", cats);
             this.$store.commit("product/setProducts", prods);

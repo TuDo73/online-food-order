@@ -83,20 +83,6 @@
             </h4>
             <div class="product-description">
               {{ productQuickView.description }}
-              <!-- <p>
-                Nam tempus turpis at metus scelerisque placerat nulla deumantos
-                solicitud felis. Pellentesque diam dolor, elementum etos
-                lobortis des mollis ut risus. Sedcus faucibus an sullamcorper
-                mattis drostique des commodo pharetras loremos.Donec pretium
-                egestas sapien et mollis. Lorem ipsum dolor sit amet
-                Sonsectetur...
-              </p>
-              <ul>
-                <li>Lorem impsum</li>
-                <li>Lorem impsum lorem</li>
-                <li>Lorem impsum</li>
-                <li>Lorem impsum lorem</li>
-              </ul> -->
             </div>
           </div>
         </div>
@@ -105,7 +91,6 @@
   </section>
 </template>
 <script>
-// import { globalFunction } from "@/global/global.js";
 import { mapState } from "vuex";
 
 export default {

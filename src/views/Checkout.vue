@@ -284,7 +284,6 @@
 <script>
 import { globalFunction } from "@/global/global.js";
 import { mapState } from "vuex";
-// import eventBus from "@/eventBus/eventBus.js";
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
 import Cart from "@/components/Cart.vue";

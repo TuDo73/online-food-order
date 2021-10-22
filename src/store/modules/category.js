@@ -3,58 +3,6 @@ import Vue from "vue";
 
 const state = {
   // data
-  // categories: [
-  //   {
-  //     id: 1,
-  //     name: "Category 1",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Category 2",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Category 3",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Category 4",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "Category 5",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 6,
-  //     name: "Category 6",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 7,
-  //     name: "Category 7",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 8,
-  //     name: "Category 8",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 9,
-  //     name: "Category 9",
-  //     // isSelected: false,
-  //   },
-  //   {
-  //     id: 10,
-  //     name: "Category 10",
-  //     // isSelected: false,
-  //   },
-  // ],
   categories: [],
   isSticky: false,
 };
@@ -143,7 +91,6 @@ const actions = {
 
     // handle click at last slide
     if (
-      // swiper.snapIndex == swiper.snapGrid.length - 1 &&
       swiper.isEnd &&
       swiper.snapIndex != swiper.activeIndex &&
       swiper.clickedSlide.classList.contains("swiper-slide-active")

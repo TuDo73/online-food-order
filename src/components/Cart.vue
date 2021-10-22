@@ -104,7 +104,6 @@
                       >
                         Cancel
                       </span>
-                      <!-- <span class="button-item delete-btn">Delete</span> -->
                       <span
                         class="button-item save-btn"
                         @click="handleProductNote"
@@ -147,7 +146,6 @@
 <script>
 import { globalFunction } from "@/global/global.js";
 import { mapState } from "vuex";
-// import eventBus from "@/eventBus/eventBus.js";
 
 export default {
   directives: {
@@ -241,14 +239,9 @@ export default {
       switch (value) {
         case "increase":
           console.log(id);
-          // this.productQuantity += 1;
           break;
         case "decrease":
           console.log(id);
-          // this.productQuantity -= 1;
-          // if (this.productQuantity <= 0) {
-          //   this.productQuantity = 1;
-          // }
           break;
         default:
           break;

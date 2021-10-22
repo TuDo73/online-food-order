@@ -31,7 +31,6 @@ export default {
           restaurantData.data[0]
         );
         console.log("restaurantData:", restaurantData.data[0]);
-        // this.$store.commit("helper/setLoadingState", false);
       } catch (error) {
         this.$store.commit("helper/setLoadingState", true);
         console.log(error);

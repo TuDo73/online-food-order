@@ -97,14 +97,9 @@ export default {
             eventBus.$emit("handleCategorySlider", "");
 
             this.$store.commit("helper/setLoadingState", false);
-
-            console.log("categories:", cats);
-            console.log("products:", prods);
           })
         )
-        .catch((error) => {
-          console.log(error);
-        });
+        .catch((error) => {});
     },
 
     closeAllPopup() {

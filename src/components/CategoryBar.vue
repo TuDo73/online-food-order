@@ -112,7 +112,6 @@ export default {
 
   created() {
     eventBus.$on("handleCategorySlider", () => {
-      console.log("Emit Slider");
       this.handleCategorySlider();
     });
   },

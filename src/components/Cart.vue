@@ -238,10 +238,8 @@ export default {
     handleProductQuantityButton(id, value) {
       switch (value) {
         case "increase":
-          console.log(id);
           break;
         case "decrease":
-          console.log(id);
           break;
         default:
           break;
@@ -252,9 +250,7 @@ export default {
       this.selectedNoteItem = value;
     },
 
-    handleProductNote() {
-      console.log(this.productNote);
-    },
+    handleProductNote() {},
   },
 
   created() {},

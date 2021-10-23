@@ -30,10 +30,8 @@ export default {
           "restaurant/setRestaurantData",
           restaurantData.data[0]
         );
-        console.log("restaurantData:", restaurantData.data[0]);
       } catch (error) {
         this.$store.commit("helper/setLoadingState", true);
-        console.log(error);
       }
     },
 

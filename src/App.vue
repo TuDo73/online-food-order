@@ -38,8 +38,6 @@ export default {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
       this.detectScreenSize();
-
-      // console.log("screen", this.isOnSmallScreen);
     },
 
     detectScreenSize() {
